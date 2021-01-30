@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+
+interface Listado {
+  icon: string;
+  name: string;
+  redirectTo: string
+}
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
+})
+export class HomePage implements OnInit {
+
+  listado: Listado[] = [
+    {
+      icon: 'logo-octocat',
+      name: 'Action Sheet',
+      redirectTo: '/action-sheet'
+    },
+    {
+      icon: 'logo-github',
+      name: 'Alert',
+      redirectTo: '/alert'
+    },
+  ];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
