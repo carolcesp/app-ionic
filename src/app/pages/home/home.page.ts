@@ -34,6 +34,11 @@ export class HomePage implements OnInit {
       name: 'Buttons',
       redirectTo: '/buttons'
     },
+    {
+      icon: 'card-outline',
+      name: 'Cards',
+      redirectTo: '/cards'
+    },
   ];
 
   constructor() { }
