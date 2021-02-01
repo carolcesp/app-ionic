@@ -44,6 +44,11 @@ export class HomePage implements OnInit {
       name: 'Checkbox',
       redirectTo: '/checkbox'
     },
+    {
+      icon: 'calendar-outline',
+      name: 'DateTime',
+      redirectTo: '/date-time'
+    },
   ];
 
   constructor() { }
