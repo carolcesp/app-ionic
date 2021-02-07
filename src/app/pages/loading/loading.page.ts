@@ -20,7 +20,7 @@ export class LoadingPage implements OnInit {
 
     setTimeout(() => {
       this.loading.dismiss();
-    }, 1000);
+    }, 2000);
   }
 
   async presentLoading(message: string) {
