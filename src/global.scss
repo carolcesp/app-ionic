@@ -28,3 +28,7 @@
 .destructive-color-md , .destructive-color-md .sc-ion-action-sheet-md{
   color: red!important;
 }
+
+ion-item {
+ --background: transparent;
+}

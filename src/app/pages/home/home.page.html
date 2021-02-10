@@ -1,15 +1,18 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title color="primary">Home</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+  <ion-title color="primary">APP COMPONENTES IONIC</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
-    <ion-item *ngFor="let item of listado" [routerLink]="item.redirectTo" detail>
-      <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>{{item.name}}
-    </ion-item>
-  </ion-list>
+  <P class="ion-padding">En el menú se encuentran ejemplos de distintos
+    componentes de Ionic como prueba y recordatorio de como usarlos.
+  </P>
 
 </ion-content>
