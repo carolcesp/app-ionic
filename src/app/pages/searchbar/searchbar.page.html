@@ -1,7 +1,9 @@
 <ion-header>
-
   <ion-toolbar>
-    <ion-title>Search</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">Search</ion-title>
   </ion-toolbar>
 
   <ion-searchbar 
@@ -17,7 +19,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let item of listAlbum | filterAlbum:text">
+    <ion-item *ngFor="let item of listAlbum | myFilter:text:'text'">
       <ion-label>{{item.title}}</ion-label>
     </ion-item>
   </ion-list>
