@@ -14,11 +14,16 @@ export class DataService {
 
   getUsers () {
     let url = 'https://jsonplaceholder.typicode.com/users';
-    return this.http.get(url)
+    return this.http.get(url);
+  }
+
+  getAlbum () {
+    let url = 'https://jsonplaceholder.typicode.com/albums';
+    return this.http.get(url);
   }
 
   getMenuOptions() {
-    return this.http.get<Componente[]>('/assets/data/menu-options.json')
-
+    return this.http.get<Componente[]>('/assets/data/menu-options.json');
   }
+  
 }
