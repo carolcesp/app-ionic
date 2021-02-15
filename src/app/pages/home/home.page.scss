@@ -1,9 +1,14 @@
 .content-image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  .img-crazy-home{
+  .content-text{ 
+    text-align: center;
+    margin-top: 40px;
+  }
+  .img-crazy-home {
     width: 50%;
     height: 50%;
   }
