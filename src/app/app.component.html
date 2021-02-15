@@ -1,26 +1,28 @@
 <ion-app>
+  <ion-split-pane when="md" contentId="main">
+    <ion-menu side="start" menuId="first" contentId="main" (ionWillClose)="true" class="my-custom-menu">
+  
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+  
+        <ion-list>
+          <!-- autoHide para que no esten ocultas las opciones en dispositivos grandes -->
+          <ion-menu-toggle autoHide="false" *ngFor="let item of components | async">
+            <ion-item [routerLink]="item.redirectTo" detail>
+              <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>{{item.name}}
+            </ion-item>
+          </ion-menu-toggle>
+  
+        </ion-list>
+  
+      </ion-content>
+    </ion-menu>
+  
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 
-  <ion-menu side="start" menuId="first" contentId="main" (ionWillClose)="true" class="my-custom-menu">
-
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menú</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-
-      <ion-list>
-
-        <ion-menu-toggle *ngFor="let item of components | async">
-          <ion-item [routerLink]="item.redirectTo" detail>
-            <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>{{item.name}}
-          </ion-item>
-        </ion-menu-toggle>
-
-      </ion-list>
-
-    </ion-content>
-  </ion-menu>
-
-  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
