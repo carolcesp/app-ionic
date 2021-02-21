@@ -49,10 +49,14 @@ export class ListPage implements OnInit {
 
   delete( user: any ) {
     console.log('delete:',user.name)
+
     this.listUserDelete.push({
       id: user.id,
       usuario:user.name,
     });
+
+    console.log(JSON.stringify(this.listUserDelete))
+
 
     this.ionList.closeSlidingItems();
 

@@ -25,6 +25,7 @@ export class ModalInfoPage implements OnInit {
       nombre: 'carol',
       pais: 'España'
     });
+    console.log(this.nombre,this.pais)
   }
 
 }
